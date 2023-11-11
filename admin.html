@@ -1,212 +1,197 @@
-<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <title>Attendance Dashboard | By Code Info</title>
-      <link rel="stylesheet" href="style.css" />
-      <!-- Font Awesome Cdn Link -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    </head>
-    <body>
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="#" class="logo">
-              <img src="/ad/image/security.png">
-              <span class="nav-item">Admin</span>
-            </a></li>
-            <li><a href="#">
-              <i class="fas fa-menorah"></i>
-              <span class="nav-item">Danh Mục</span>
-            </a></li>
-            <!-- <li><a href="#">
-              <i class="fas fa-comment"></i>
-              <span class="nav-item">Message</span>
-            </a></li>
-            <li><a href="#">
-              <i class="fas fa-database"></i>
-              <span class="nav-item">Report</span>
-            </a></li>
-            <li><a href="#">
-              <i class="fas fa-chart-bar"></i>
-              <span class="nav-item">Attendance</span>
-            </a></li>
-            <li><a href="#">
-              <i class="fas fa-cog"></i>
-              <span class="nav-item">Setting</span>
-            </a></li>
-    
-            <li><a href="#" class="logout">
-              <i class="fas fa-sign-out-alt"></i>
-              <span class="nav-item">Log out</span>
-            </a></li> -->
-          </ul>
-        </nav>
-    
-    
-        <section class="main">
-          <!-- <div class="main-top">
-            <h1>Attendance</h1>
-            <i class="fas fa-user-cog"></i>
-          </div> -->
-          <!-- <div class="users">
-            <div class="card">
-              <img src="./pic/img1.jpg">
-              <h4>Sam David</h4>
-              <p>Ui designer</p>
-              <div class="per">
-                <table>
-                  <tr>
-                    <td><span>85%</span></td>
-                    <td><span>87%</span></td>
-                  </tr>
-                  <tr>
-                    <td>Month</td>
-                    <td>Year</td>
-                  </tr>
-                </table>
-              </div>
-              <button>Profile</button>
-            </div>
-            <div class="card">
-              <img src="./pic/img2.jpg">
-              <h4>Balbina kherr</h4>
-              <p>Progammer</p>
-              <div class="per">
-                <table>
-                  <tr>
-                    <td><span>82%</span></td>
-                    <td><span>85%</span></td>
-                  </tr>
-                  <tr>
-                    <td>Month</td>
-                    <td>Year</td>
-                  </tr>
-                </table>
-              </div>
-              <button>Profile</button>
-            </div>
-            <div class="card">
-              <img src="./pic/img3.jpg">
-              <h4>Badan John</h4>
-              <p>tester</p>
-              <div class="per">
-                <table>
-                  <tr>
-                    <td><span>94%</span></td>
-                    <td><span>92%</span></td>
-                  </tr>
-                  <tr>
-                    <td>Month</td>
-                    <td>Year</td>
-                  </tr>
-                </table>
-              </div>
-              <button>Profile</button>
-            </div>
-            <div class="card">
-              <img src="./pic/img4.jpg">
-              <h4>Salina micheal</h4>
-              <p>Ui designer</p>
-              <div class="per">
-                <table>
-                  <tr>
-                    <td><span>85%</span></td>
-                    <td><span>82%</span></td>
-                  </tr>
-                  <tr>
-                    <td>Month</td>
-                    <td>Year</td>
-                  </tr>
-                </table>
-              </div>
-              <button>Profile</button>
-            </div>
-          </div> -->
-    
-         
-         <!-- table -->
-          <section class="attendance">
-            <div class="attendance-list">
-              <h1>Danh Mục</h1>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Tên Danh Mục</th>
-                    <!-- <th>Depart</th>
-                    <th>Date</th>
-                    <th>Join Time</th>
-                    <th>Logout Time</th> -->
-                    <th colspan="">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <td>Sam David</td>
-                    <!-- <td>Design</td>
-                    <td>03-24-22</td>
-                    <td>8:00AM</td>
-                    <td>3:00PM</td> -->
-                    <td><button>Sửa</button><button>Xóa</button></td>
-                  </tr>
-                  <tr class="active">
-                    <td>02</td>
-                    <td>Balbina Kherr</td>
-                    <!-- <td>Coding</td>
-                    <td>03-24-22</td>
-                    <td>9:00AM</td>
-                    <td>4:00PM</td> -->
-                    <td><button>Sửa</button><button>Xóa</button></td>
-                  </tr>
-                  <tr>
-                    <td>03</td>
-                    <td>Badan John</td>
-                    <!-- <td>testing</td>
-                    <td>03-24-22</td>
-                    <td>8:00AM</td>
-                    <td>3:00PM</td> -->
-                    <td><button>Sửa</button><button>Xóa</button></td>
-                  </tr>
-                  <tr>
-                    <td>04</td>
-                    <td>Sara David</td>
-                    <!-- <td>Design</td>
-                    <td>03-24-22</td>
-                    <td>8:00AM</td>
-                    <td>3:00PM</td> -->
-                    <td><button>Sửa</button><button>Xóa</button></td>
-                  </tr>
-                  <!-- <tr >
-                    <td>05</td>
-                    <td>Salina</td>
-                    <td>Coding</td>
-                    <td>03-24-22</td>
-                    <td>9:00AM</td>
-                    <td>4:00PM</td>
-                    <td><button>View</button></td>
-                  </tr>
-                  <tr >
-                    <td>06</td>
-                    <td>Tara Smith</td>
-                    <td>Testing</td>
-                    <td>03-24-22</td>
-                    <td>9:00AM</td>
-                    <td>4:00PM</td>
-                    <td><button>View</button></td>
-                  </tr> -->
-                
-                </tbody>
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li >
+            <a href="#" class=" nav-link logo">
+            <img src="image/admin.jpg" alt="">
+            
+            <span class="nav-item">Admin</span>
+          </a></li>
+
+         <!-- danh mục -->
+<li>
+  <a href="#" class="nav-link-item" onclick="toggleDropdown('dropdown1')">
+    <i class="fa-solid fa-layer-group"></i>
+    <span class="nav-item">Danh Mục</span>
+    <i class="fas fa-caret-down"></i>
+  </a>
+  <ul class="dropdown" id="dropdown1">
+    <li><a class="nav-link-item" href="#">Dropdown Item 1</a></li>
+    <li><a class="nav-link-item" href="#">Dropdown Item 2</a></li>
+  </ul>
+</li>
+
+<!-- Sản Phẩm -->
+<li>
+  <a href="#" class="nav-link-item" onclick="toggleDropdown('dropdown2')">
+    <i class="fa-solid fa-gift"></i>
+    <span class="nav-item">Sản Phẩm</span>
+    <i class="fas fa-caret-down"></i>
+  </a>
+  <ul class="dropdown" id="dropdown2">
+    <li><a class="nav-link-item" href="#">Dropdown Item 1</a></li>
+    <li><a class="nav-link-item" href="#">Dropdown Item 2</a></li>
+  </ul>
+</li>
+
+<!-- Tài Khoản -->
+<li>
+  <a href="#" class="nav-link-item" onclick="toggleDropdown('dropdown3')">
+    <i class="fas fa-user-cog"></i>
+    <span class="nav-item">Tài Khoản</span>
+    <i class="fas fa-caret-down"></i>
+  </a>
+  <ul class="dropdown" id="dropdown3">
+    <li><a class="nav-link-item" href="#">Dropdown Item 1</a></li>
+    <li><a class="nav-link-item" href="#">Dropdown Item 2</a></li>
+  </ul>
+</li>
+
+<!-- Đánh Giá -->
+<li>
+  <a href="#" class="nav-link-item" onclick="toggleDropdown('dropdown4')">
+    <i class="fas fa-star-half-alt"></i>
+    <span class="nav-item">Đánh Giá</span>
+    <i class="fas fa-caret-down"></i>
+  </a>
+  <ul class="dropdown" id="dropdown4">
+    <li><a class="nav-link-item" href="#">Dropdown Item 1</a></li>
+    <li><a class="nav-link-item" href="#">Dropdown Item 2</a></li>
+  </ul>
+</li>
+
+<!-- Đơn Hàng -->
+<li>
+  <a href="#" class="nav-link-item" onclick="toggleDropdown('dropdown5')">
+    <i class="fa-solid fa-truck-fast"></i>
+    <span class="nav-item">Đơn Hàng</span>
+    <i class="fas fa-caret-down"></i>
+  </a>
+  <ul class="dropdown" id="dropdown5">
+    <li><a class="nav-link-item" href="#">Dropdown Item 1</a></li>
+    <li><a class="nav-link-item" href="#">Dropdown Item 2</a></li>
+  </ul>
+</li>
+
+<!-- Thống Kê -->
+<li>
+  <a href="#" class="nav-link-item" onclick="toggleDropdown('dropdown6')">
+    <i class="fa-solid fa-chart-simple"></i>
+    <span class="nav-item">Thống Kê</span>
+    <i class="fas fa-caret-down"></i>
+  </a>
+  <ul class="dropdown" id="dropdown6">
+    <li><a class="nav-link-item" href="#">Dropdown Item 1</a></li>
+    <li><a class="nav-link-item" href="#">Dropdown Item 2</a></li>
+  </ul>
+</li>
+          <!-- đăng xuất  -->
+         <a href="#" class="nav-link-item logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Đăng Xuất</span>
+         </a>
+        </ul>
+
+      </nav>
+  
+      <section class="main">
+       <!-- content  -->
+       <section class="attendance">
+        <div class="attendance-list">
+          <h1>Danh Mục</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tên Danh Mục</th>
                
-              </table>
-              <a href="#"><button >Thêm Mới</button></a>
-            </div>
-          </section>
-          <!-- end table -->
-        </section>
-      </div>
-    
-    </body>
-    </html>
-    </span>
+                <th >Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Sam David</td>
+             
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+              <tr class="active">
+                <td>02</td>
+                <td>Balbina Kherr</td>
+               
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Badan John</td>
+              
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Sara David</td>
+             
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+          
+            
+            </tbody>
+           
+          </table>
+         
+        </div>
+      </section>
+      </section>
+    </div>
+  </body>
+  <script>
+let openDropdownId = null;
+
+function toggleDropdown(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  
+  if (openDropdownId && openDropdownId !== dropdownId) {
+    const openDropdown = document.getElementById(openDropdownId);
+    openDropdown.style.opacity = "0";
+    setTimeout(function () {
+      openDropdown.style.display = "none";
+    }, 300);
+  }
+
+  const isDropdownVisible = dropdown.style.opacity === "1";
+
+  if (isDropdownVisible) {
+    dropdown.style.opacity = "0";
+    setTimeout(function () {
+      dropdown.style.display = "none";
+      openDropdownId = null;
+    }, 300);
+  } else {
+    dropdown.style.display = "block";
+    setTimeout(function () {
+      dropdown.style.opacity = "1";
+      openDropdownId = dropdownId;
+    }, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+  </script>
+  </html>

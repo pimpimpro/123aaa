@@ -4,15 +4,17 @@
 }
 .container-login{
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: rgb(0, 98, 255);
+    height: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family:Arial, Helvetica, sans-serif;
     padding:45px 0;
-    
 }
-
+h1{
+    text-align: center;
+}
 .form{
     width: 410px;
     height: 500px;
@@ -107,11 +109,15 @@
     margin-right: 10px;
 }
 .form-register{
-    margin-top:10px;
+    margin-top:11px;
     color:#0db5a3;
+    text-align: center;
 }
 .form-register a{
     color: #0db5a3;
     font-weight: 600;
     text-decoration: none;
 }
+
+
+  

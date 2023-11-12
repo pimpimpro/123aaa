@@ -13,108 +13,131 @@ body{
 }
 .container{
   display: flex;
-}
-nav{
-  position: relative;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  left: 0;
-  background: #fff;
-  width: 280px;
-  overflow: hidden;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-}
-.nav-link{
-  position: relative;
-  color: rgb(85, 83, 83);
-  font-size: 14px;
-  display: table;
-  width: 280px;
-  padding: 10px;
-}
-.nav-link-item{
-  position: relative;
-  color: rgb(85, 83, 83);
-  font-size: 14px;
-  display: table;
-  width: 280px;
-  padding: 10px;
-}
-.nav-link-item:hover{
-  background: #eee;
-}
+  
+} 
+
+/* logo  */
 
 .logo{
+  background:#eee;
   text-align: center;
   display: flex;
-  margin: 10px 0 0 10px;
+  margin: 10px 10px 0 10px;
   
 }
 .logo img{
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  margin: 15px;
 }
 .logo span{
   font-weight: bold;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   font-size: 18px;
   text-transform: uppercase;
+margin: 30px 0px 0px 10px;
 }
 
-nav .fa-solid{
-  position: relative;
-  width: 70px;
-  height: 40px;
-  top: 14px;
-  font-size: 20px;
-  text-align: center;
+/* =============side-bar===============  */
+
+.side-bar{
+  height: 100vh;
+  background: #fff;
+  width: 280px;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-nav .fas{
-    position: relative;
-  width: 70px;
-  height: 40px;
-  top: 14px;
-  font-size: 20px;
-  text-align: center;
+
+/*============= test=========== */
+.side-bar::-webkit-scrollbar {
+  width: 8px;
 }
-.nav-item{
+
+/* Add transition for smooth hiding/showing of scrollbar */
+.side-bar {
+  transition: overflow 0.5s;
+}
+
+/* Show scrollbar when hovering */
+.side-bar:hover {
+  overflow-y: auto; /* Show the scrollbar on hover */
+}
+/* ======================================== */
+.icon{
+  font-size: 27px;
+ padding-top: 1px;
+}
+.side-bar .menu{
+  width: 100%;
+  margin-top: 30px;
+ }
+ 
+ .side-bar .menu .item{
   position: relative;
-  top: 12px;
+  /* cursor: pointer; */
+ }
+ 
+ .side-bar .menu .item a{
+ 
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+ }
+ 
+ .side-bar .menu .item a:hover{
+  
+  background: #34AF6D;
+  transition: 0.3s ease;
+ }
+ 
+ .side-bar .menu .item i{
+  margin-right: 20px;
+ }
+ 
+ .side-bar .menu .item a .dropdown{
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+ }
+ 
+ .side-bar .menu .item .sub-menu{
+ 
+  display: none;
+ }
+ 
+ .side-bar .menu .item .sub-menu a{
+  padding-left: 80px;
+ }
+ 
+ .rotate{
+  transform: rotate(90deg);
+ }
+ /* logout  */
+ .side-bar .logout {
+  margin: 100px 10px 10px 10px;
+}
+
+.side-bar .logout a {
+  color: #333; /* Màu chữ cho phần đăng xuất */
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.side-bar .logout a span{
   margin-left: 10px;
 }
-
-
-.logout{
-  position: absolute;
-  bottom: 0;
+.side-bar .logout a:hover {
+  background: #ddd; /* Màu nền khi hover */
+  transition: 0.3s ease;
 }
-
-/* dropdown */
-
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.dropdown a {
-  display: block;
-  padding: 12px;
-  color: rgb(85, 83, 83);
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.dropdown a:hover {
-  background-color: #eee;
-}
-
 
 
 /* Main Section */

@@ -42,16 +42,30 @@ margin: 30px 0px 0px 10px;
 /* =============side-bar===============  */
 
 .side-bar{
-
- 
-
   height: 100vh;
- 
   background: #fff;
   width: 280px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  scroll-behavior: smooth;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
+
+/*============= test=========== */
+.side-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Add transition for smooth hiding/showing of scrollbar */
+.side-bar {
+  transition: overflow 0.5s;
+}
+
+/* Show scrollbar when hovering */
+.side-bar:hover {
+  overflow-y: auto; /* Show the scrollbar on hover */
+}
+/* ======================================== */
 .icon{
   font-size: 27px;
  padding-top: 1px;
@@ -105,41 +119,25 @@ margin: 30px 0px 0px 10px;
  .rotate{
   transform: rotate(90deg);
  }
-.logout{
-  position: absolute;
-  bottom: 40px;
-  margin:0px 20px 0px 20px;
-  padding: 15px;
+ /* logout  */
+ .side-bar .logout {
+  margin: 100px 10px 10px 10px;
 }
-.logout a{
-  color: black;
 
+.side-bar .logout a {
+  color: #333; /* Màu chữ cho phần đăng xuất */
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+  text-decoration: none;
 }
-.logout i{
-  font-size: 27px;
-  transition: all 0.12s ease-in;
-}
-.logout span{
-  transition: all 0.12s ease-in;
-}
-.logout:hover span{
-  font-size: 19px;
-  text-decoration: underline;
-}
-.logout:hover i{
-  font-size: 30px;
-}
-/* .logout:hover{
-  background-color: #34AF6D;
-} */
-.logout span{
+.side-bar .logout a span{
   margin-left: 10px;
 }
-
-
-
-
-
+.side-bar .logout a:hover {
+  background: #ddd; /* Màu nền khi hover */
+  transition: 0.3s ease;
+}
 
 
 /* Main Section */

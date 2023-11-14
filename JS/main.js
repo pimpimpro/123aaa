@@ -55,3 +55,30 @@ startCountdown(countdownDuration);
 
 // Show password
 
+function showPassword() {
+  var passwordInput = document.getElementById("password");
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    passwordInput.classList.add("hidden-password");
+  } else {
+    passwordInput.type = "password";
+    passwordInput.classList.remove("hidden-password");
+  }
+}
+
+// 
+
+
+function hienmatkhau() {
+const password = document.getElementById("matkhau");
+const confirmPassword = document.getElementById("confirm-matkhau");
+const showPassword = document.getElementById("show-matkhau");
+
+if (showPassword.checked) {
+  password.type = "text";
+  confirmPassword.type = "text";
+} else {
+  password.type = "password";
+  confirmPassword.type = "password";
+}
+}

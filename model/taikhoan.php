@@ -8,4 +8,9 @@ function checkuser($user){
     $result=pdo_query_one($sql);
     return $result;
 }
+function dangnhap($user,$pass){
+    $sql="SELECT * FROM user WHERE username='$user' and password='$pass'";
+    $taikhoan = pdo_query_one($sql);
+    return $taikhoan;
+}
 ?>

@@ -1,15 +1,15 @@
 <?php
-    session_start();
+    // session_start();
 
-    if( isset($_POST['dangnhap'])){
-        $Username = $_POST['Username'];
-        $password = $_POST['password'];
+    // if( isset($_POST['dangnhap'])){
+    //     $Username = $_POST['Username'];
+    //     $password = $_POST['password'];
 
-        if($Username == 'admin@gmail.com' && $password =='123'){
-            $_SESSION['Username']= $Username;
-            header('location:trangchu.php');
-        }
-    }
+    //     if($Username == 'admin@gmail.com' && $password =='123'){
+    //         $_SESSION['Username']= $Username;
+    //         header('location:trangchu.php');
+    //     }
+    // }
 
 ?>
 
@@ -28,10 +28,10 @@
             <div class="form-content">
                 <h2>Welcom to</h2>
                 <h1>Run ELite</h1>
-                <form action="" method="POST">
+                <form action="index.php?act=dangnhap" method="POST">
                     <div class="field input-field">
                         <label for="">Username</label><br>
-                        <input type="text" name="Username" placeholder="Username" class="input" >
+                        <input type="text" name="username" placeholder="Username" class="input" >
                     </div>
 
                     <div class="field input-field">
@@ -45,22 +45,31 @@
                     </div>
                     
                     <div class="button-login">
-                        <button type="submit" name="dangnhap" >Login</button>
-                    </div>
+                <input type="submit" value="Đăng Nhập" name="dangnhap">
+                </div>
+                <p style="color: red; font-size:15px ;  font-weight:bold ; margin-top:20px;">
+                <?php
+                if(isset($thongbaoerr)&& ($thongbaoerr!="")){
+                    echo $thongbaoerr;
+                }
+                ?>
+                </p>
+               
                 </form>
+              
                 <div class="or">Or Continue</div>
                 <div class="mxh">
                     <button><i class="fa-brands fa-facebook"></i>Facebook</button>
                     <button><i class="fa-brands fa-google"></i>Google</button>
                 </div>
                 <div class="form-register">
-                    <span>Don't have an account? <a href="./register.html" class="link signup-link">Signup</a></span>
+                    <span>Don't have an account? <a href="index.php?act=dangky" class="link signup-link">Signup</a></span>
                 </div>
             </div>
             
         </div>
         <div class="login-image">
-            <img src="../image/l.jpg" alt="">
+            <img src="image/l.jpg" alt="">
         </div>        
 </section>
 <script src="../js/main.js"></script>

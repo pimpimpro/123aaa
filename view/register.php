@@ -1,32 +1,23 @@
 <?php
-    // session_start();
-    // if( isset($_POST['dangnhap'])){
-    //     $Username = $_POST['Username'];
-    //     $password = $_POST['password'];
+// session_start();
+// if( isset($_POST['dangnhap'])){
+//     $Username = $_POST['Username'];
+//     $password = $_POST['password'];
 
-    //     if($Username == 'admin@gmail.com' && $password =='123'){
-           
-    //         header('location:login.php');
-    //     }
-    //     else{
-    //         echo "tài khoản hoặc mật khẩu sai";
-    //     }
-    // }
+//     if($Username == 'admin@gmail.com' && $password =='123'){
+
+//         header('location:login.php');
+//     }
+//     else{
+//         echo "tài khoản hoặc mật khẩu sai";
+//     }
+// }
 
 ?>
 
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Document</title>
-</head>
-<body> -->
-<section class="container-login forms"> 
-    <div class="form login">      
+<section class="container-login forms">
+    <div class="form login">
         <div class="form-content">
             <h2>Welcom to</h2>
             <h1>Run ELite</h1>
@@ -37,45 +28,58 @@
                 </div>
 
 
-                 <!-- THÔNG BÁO LỖI TRÙNG USERNAME, CSS LẠI CHO HỢP LÝ NHÉ! -->
-                <span><?php echo isset($thongbao)?$thongbao:""?></span>
+                <!-- THÔNG BÁO LỖI TRÙNG USERNAME, CSS LẠI CHO HỢP LÝ NHÉ! -->
+                <span style="color: red;"><?php echo isset($thongbaoerr) ? $thongbaoerr : "" ?></span>
 
 
                 <div class="field input-field">
                     <label for="">Email</label><br>
-                    <input type="text" placeholder="Email" class="input" name="email">
+                    <input type="email" placeholder="Email" class="input" name="email">
                 </div>
 
                 <div class="field input-field">
                     <label for="password">Password</label> <br>
                     <input type="password" name="matkhau" id="matkhau" placeholder="Mật khẩu của bạn">
-                    
-                    
+
+
                 </div>
+                <span style="color: red;"> <?php echo isset($thongbaopass) ? $thongbaopass : "" ?></span>
+               
                 <div class="field input-field">
                     <label for="password"> Nhập lại Password</label> <br>
                     <input type="password" name="confirm-matkhau" id="confirm-matkhau" placeholder="Nhập lại mật khẩu">
-                    
-                   </div>
 
+                </div>
+                <span style="color: red;"> <?php echo isset($thongbaorepass) ? $thongbaorepass : "" ?> </span>
+               
                 <div class="form-link">
-                <input type="checkbox" name="show-matkhau" id="show-matkhau" onclick="hienmatkhau()">
-                <label for="show-matkhau">Hiện mật khẩu</label>
+                    <input type="checkbox" name="show-matkhau" id="show-matkhau" onclick="hienmatkhau()">
+                    <label for="show-matkhau">Hiện mật khẩu</label>
                     <a href="#" class="forgot-pass">Forgot password?</a>
                 </div>
                 <div class="button-login">
-                <input type="submit" value="Đăng ký" name="dangky">
+                    <input type="submit" value="Đăng ký" name="dangky">
                 </div>
+                <p style="margin-left:15px;margin-top:20px;">
+                    <?php echo isset($thongbao) ? $thongbao : "" ?>
+                </p>
+                <p style="margin-left:15px;margin-top:20px;">
+                    <?php echo isset($thongbaoall) ? $thongbaoall : "" ?>
+                </p>
+
+
+
+
             </form>
-       
+
             <div class="form-register">
-                <span>Have an account? <a href="index.php?act=dangnhap" class="link signup-link">Signup</a></span>
+                <span>Have an account? <a href="index.php?act=dangnhap" class="link signup-link">Login</a></span>
             </div>
         </div>
-        
+
     </div>
     <div class="login-image">
         <img src="image/l.jpg" alt="">
-    </div>       
-    
+    </div>
+
 </section>

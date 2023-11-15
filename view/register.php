@@ -35,6 +35,12 @@
                     <label for="">Username</label><br>
                     <input type="text" placeholder="Username" class="input" name="user">
                 </div>
+
+
+                 <!-- THÔNG BÁO LỖI TRÙNG USERNAME, CSS LẠI CHO HỢP LÝ NHÉ! -->
+                <span><?php echo isset($thongbao)?$thongbao:""?></span>
+
+
                 <div class="field input-field">
                     <label for="">Email</label><br>
                     <input type="text" placeholder="Email" class="input" name="email">
@@ -61,13 +67,7 @@
                 <input type="submit" value="Đăng ký" name="dangky">
                 </div>
             </form>
-            
-            <?php  
-if(isset($thongbao) && ($thongbao != "")) {
-    echo "<script> alert(" . json_encode($thongbao) . "); </script>";
-}
-?>
-            
+       
             <div class="form-register">
                 <span>Have an account? <a href="index.php?act=dangnhap" class="link signup-link">Signup</a></span>
             </div>

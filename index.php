@@ -1,7 +1,7 @@
 <?php
 // session_start();
-include "model/pdo.php";
-include "model/taikhoan.php";
+include "C:/xampp/htdocs/123a/123aaa/model/pdo.php";
+include "C:/xampp/htdocs/123a/123aaa/model/taikhoan.php";
 
     include "view/header.php";
     if(isset($_GET['act'])&&($_GET['act']!="")){
@@ -12,22 +12,24 @@ include "model/taikhoan.php";
                     $name = $_POST['user'];
                     $email = $_POST['email'];
                     $pass=$_POST['matkhau'];
-                  $checkuser=checkuser($name);
-if(is_array($checkuser)){
-    $thongbao="User "
-}
-                    themtaikhoan($name,$pass,$email);
-                    $thongbao="Đăng Ký Thành Công";
+                    $checkuser=checkuser($name);
+                    if(is_array($checkuser) && ($checkuser!="")){
+                        $thongbao="User đã tồn tại,đky tên khác";
+                    }else{
+                        themtaikhoan($name,$pass,$email);
+                        $thongbao="Đăng Ký Thành Công";
+                    }
+                    
                 }
-include "view/register.php";
-break;
+                include "view/register.php";
+                break;
 case "dangnhap":
     include "view/login.php";
 break;
     
         }
     }else{
-            include "view/trangchu.php";
+            include "view/register.php";
         }    
     include "view/footer.php";
 ?>

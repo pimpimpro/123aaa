@@ -16,7 +16,7 @@
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,16 +24,20 @@
     <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
-<body>
+<body> -->
 <section class="container-login forms"> 
     <div class="form login">      
         <div class="form-content">
             <h2>Welcom to</h2>
             <h1>Run ELite</h1>
-            <form action="#">
+            <form action="index.php?act=dangky" method="post">
                 <div class="field input-field">
                     <label for="">Username</label><br>
-                    <input type="text" placeholder="Username" class="input" >
+                    <input type="text" placeholder="Username" class="input" name="user">
+                </div>
+                <div class="field input-field">
+                    <label for="">Email</label><br>
+                    <input type="text" placeholder="Email" class="input" name="email">
                 </div>
 
                 <div class="field input-field">
@@ -54,20 +58,24 @@
                     <a href="#" class="forgot-pass">Forgot password?</a>
                 </div>
                 <div class="button-login">
-                    <button>Register</button>
+                <input type="submit" value="Đăng ký" name="dangky">
                 </div>
             </form>
+            
+            <?php  
+if(isset($thongbao) && ($thongbao != "")) {
+    echo "<script> alert(" . json_encode($thongbao) . "); </script>";
+}
+?>
+            
             <div class="form-register">
-                <span>Don't have an account? <a href="./login.html" class="link signup-link">Signup</a></span>
+                <span>Have an account? <a href="index.php?act=dangnhap" class="link signup-link">Signup</a></span>
             </div>
         </div>
         
     </div>
     <div class="login-image">
-        <img src="../image/l.jpg" alt="">
+        <img src="image/l.jpg" alt="">
     </div>       
     
 </section>
-<script src="../js/main.js"></script>
-</body>
-</html>
